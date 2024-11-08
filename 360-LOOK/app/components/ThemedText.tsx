@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     headline: {
         fontSize: 24,
         lineHeight: 32,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        backgroundColor: "white"
     },
     caption: {
         fontSize: 8,
@@ -40,7 +41,7 @@ type Props = TextProps & {
     color ?: keyof typeof Colors["light"]
 }
 
-export function ThemedText ({variant, color, ...rest}: Props){
-    const colors = useThemeColors()
-    return <Text style={[styles[variant ?? 'body3'], {color: colors[color]}]} {...rest}/>
-}
+// export function ThemedText ({variant, color, ...rest}: Props){
+//     const colors = useThemeColors()
+//     return <Text style={[styles[variant ?? 'body3'], {color: colors[color]}]} {...rest}/>
+// }
