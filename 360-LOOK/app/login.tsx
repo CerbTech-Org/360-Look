@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 import N_button from './button';
+import { Link } from 'expo-router';
 
 const my_style = StyleSheet.create({
   form: {
@@ -152,10 +153,14 @@ const SimpleForm = (props: Whichform) => {
       />
     </View>
         <Text style={styles.link2}>Mot de passe oublié?</Text>
-    <View style={styles.link}>
-        <N_button  wid={300} description="Se connecter" left={-40} color="white" back="#3399FF"/>
-        {/* <Button  title="Login" onPress={handleSubmit(onSubmit)}/> */}
-    </View>
+        <Link style={{
+          marginLeft: 140,
+          marginTop:35
+        }} href="/Get" >
+          <View style={styles.link}>
+              <N_button  wid={300} description="Se connecter" left={-90} color="white" back="#3399FF"/>
+          </View>
+        </Link>
     </View>
     
   );

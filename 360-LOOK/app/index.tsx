@@ -2,7 +2,6 @@ import {StyleSheet, Text, View, Button, Image, Pressable} from "react-native";
 import { useThemeColors } from "./hooks/useThemeColors";
 import {Link} from "expo-router"
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Card } from "./components/card";
 import SimpleForm from "./login";
 import Headbar from "./appbar";
 import { Directions } from "react-native-gesture-handler";
@@ -92,7 +91,7 @@ export default function Index() {
   ]
   const [num1, setone] = useState(0);
   const [num2, settwo] = useState(1);
-  const [num3, setth] = useState(0);
+  const [num3, setth] = useState(1);
   function change_color(){
     var a = num1
     setone(num2)

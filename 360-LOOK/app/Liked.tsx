@@ -1,8 +1,27 @@
-import {Text, View} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+// App.js
 
-export default function About() {
-    return <SafeAreaView>
-        <Text>Saw</Text>
-    </SafeAreaView>
-}
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import Weather from './Weather';
+import { styles } from './styles';
+
+const App = () => {
+    return (
+        <View style={my_styles.container}>
+            <Weather />
+        </View>
+    );
+};
+
+const my_styles = StyleSheet.create({
+    container: {
+      width: "100%",
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 1,
+      padding: 0
+    }
+  })
+
+export default App;
